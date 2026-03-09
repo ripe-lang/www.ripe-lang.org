@@ -55,6 +55,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
+      title: "Ripe",
       logo: {
         alt: "Ripe",
         src: "img/logo.png",

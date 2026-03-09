@@ -48,10 +48,10 @@
   width: auto;
 }
 
-/* No site title text, logo only */
-.navbar__brand .navbar__title {
-  display: none;
+.navbar__title {
+  font-size: 1.2rem;
 }
+
 
 .footer {
   border-top: var(--ripe-border);
