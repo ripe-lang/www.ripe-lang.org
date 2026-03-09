@@ -10,5 +10,5 @@ build/
 *.local
 
 # Not ready to release
-blog/
-docs/
+blog-wip/
+docs-wip/
