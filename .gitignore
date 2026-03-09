@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+.docusaurus/
+
+# Misc
+.DS_Store
+*.local
+
+# Not ready to release
+blog/
+docs/

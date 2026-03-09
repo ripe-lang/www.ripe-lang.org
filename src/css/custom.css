@@ -1,0 +1,230 @@
+/**
+ * Ripe language site
+ */
+
+:root {
+  /* Mango orange */
+  --ifm-color-primary: #c97f0a;
+  --ifm-color-primary-dark: #b57209;
+  --ifm-color-primary-darker: #a96b08;
+  --ifm-color-primary-darkest: #8a5707;
+  --ifm-color-primary-light: #dd8c0b;
+  --ifm-color-primary-lighter: #e5920c;
+  --ifm-color-primary-lightest: #f0a020;
+
+  --ifm-global-radius: 4px;
+  --ifm-code-border-radius: 3px;
+  --ifm-button-border-radius: 4px;
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+  --ifm-navbar-shadow: none;
+
+  --ifm-font-family-base: system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
+  --ifm-code-font-size: 87%;
+
+  --ripe-border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #f0a020;
+  --ifm-color-primary-dark: #e09018;
+  --ifm-color-primary-darker: #d48515;
+  --ifm-color-primary-darkest: #ae6c10;
+  --ifm-color-primary-light: #f2ab35;
+  --ifm-color-primary-lighter: #f4b244;
+  --ifm-color-primary-lightest: #f7c370;
+
+  --ripe-border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.navbar {
+  border-bottom: var(--ripe-border);
+}
+
+.navbar__logo {
+  height: 32px;
+  width: auto;
+}
+
+/* No site title text, logo only */
+.navbar__brand .navbar__title {
+  display: none;
+}
+
+.footer {
+  border-top: var(--ripe-border);
+  background: var(--ifm-background-color);
+  padding: 2rem 0;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--ifm-background-color);
+  --ifm-footer-color: var(--ifm-color-emphasis-600);
+  --ifm-footer-title-color: var(--ifm-font-color-base);
+  --ifm-footer-link-color: var(--ifm-color-emphasis-600);
+  --ifm-footer-link-hover-color: var(--ifm-font-color-base);
+}
+
+.footer__links {
+  justify-content: flex-end !important;
+}
+
+.footer__title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer__link-item {
+  font-size: 0.8rem;
+}
+
+.footer__bottom {
+  text-align: left !important;
+  margin-top: 1.5rem;
+}
+
+.footer__copyright {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+div[class*="codeBlock"] {
+  box-shadow: none;
+  border: var(--ripe-border);
+}
+
+.theme-doc-sidebar-container {
+  border-right: var(--ripe-border) !important;
+}
+
+.menu__link {
+  font-size: 0.82rem;
+  border-radius: 0;
+}
+
+.menu__list-item-collapsible .menu__link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+a[href*="//"]::after,
+.footer a::after {
+  display: none !important;
+}
+
+.card {
+  box-shadow: none;
+  border: var(--ripe-border);
+}
+
+.home-hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  border-bottom: var(--ripe-border);
+}
+
+.home-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.home-hero .tagline {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.home-hero .ctas {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-section {
+  padding: 4rem 0;
+  border-bottom: var(--ripe-border);
+}
+
+.home-section:last-child {
+  border-bottom: none;
+}
+
+.home-section .container {
+  max-width: 960px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 4rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.code-section {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .code-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.code-section-text h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.code-section-text p {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+}
+
+.code-section pre {
+  margin: 0;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.5rem;
+}
