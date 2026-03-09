@@ -39,7 +39,19 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.heroCode}>
-            <CodeBlock language="ripe">{HELLO_WORLD}</CodeBlock>
+            <div className={styles.codePanel}>
+              <div className={styles.codePanelTab}>hello.rp</div>
+              <CodeBlock language="ripe">{HELLO_WORLD}</CodeBlock>
+            </div>
+            <div className={styles.shellPanel}>
+              <div className={styles.shellPanelTab}>shell</div>
+              <div className={styles.shellBody}>
+                <span className={styles.shellPrompt}>$ </span>
+                <span>ripe run hello.rp</span>
+                <br />
+                <span>hello, world</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
