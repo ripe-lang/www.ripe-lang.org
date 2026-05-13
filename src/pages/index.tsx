@@ -7,11 +7,10 @@ import DownloadButton from "../components/DownloadButton";
 import styles from "./index.module.css";
 
 const HELLO_WORLD = `\
-import io
+extern puts(s: ^i8): i32
 
 main() {
-  io.print("hello, world")
-  0
+  puts("hello, world")
 }`;
 
 export default function Home() {
