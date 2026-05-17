@@ -28,7 +28,7 @@ if (ExecutionEnvironment.canUseDOM) {
     },
     keyword: {
       pattern:
-        /\b(?:import|let|var|if|else|while|for|in|match|ok|err|return|struct|interface|on|pub|extern|inline|defer|type|sizeof|as|true|false|panic|and|or|not|break|continue)\b/,
+        /\b(?:import|let|var|if|else|while|for|in|match|ok|err|return|struct|interface|on|pub|extern|inline|defer|type|sizeof|as|true|false|panic|and|or|not|break|continue|func)\b/,
     },
     builtin: {
       pattern:

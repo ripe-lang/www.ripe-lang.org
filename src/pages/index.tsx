@@ -7,7 +7,7 @@ import DownloadButton from "../components/DownloadButton";
 import styles from "./index.module.css";
 
 const HELLO_WORLD = `\
-extern func puts(s: *i8): i32
+extern func puts(s: *i8) i32
 
 func main() {
   puts("hello, world")
