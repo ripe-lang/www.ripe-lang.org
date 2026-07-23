@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <h1>Ripe</h1>
             <p className={styles.tagline}>
-              A general-purpose systems programming language.
+              A systems programming language.
             </p>
             <div className={styles.ctas}>
               <DownloadButton />
