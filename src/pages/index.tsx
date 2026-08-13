@@ -7,7 +7,7 @@ import DownloadButton from "../components/DownloadButton";
 import styles from "./index.module.css";
 
 const HELLO_WORLD = `\
-extern func puts(s: *i8) i32
+extern "C" func puts(s: cstr) i32
 
 func main() {
   puts("hello, world")
@@ -26,16 +26,11 @@ export default function Home() {
             </p>
             <div className={styles.ctas}>
               <DownloadButton />
-              <Link
-                className="button button--secondary"
-                to="/docs/getting-started/hello-world"
-              >
+              <Link className="button button--secondary" to="/docs/install">
                 Get Started
               </Link>
             </div>
-            <Link className={styles.version} to="/blog/introducing-ripe">
-              Version 0.0.0 - pre-release
-            </Link>
+            <span className={styles.version}>Version 0.0.0 - pre-release</span>
           </div>
           <div className={styles.heroCode}>
             <div className={styles.codePanel}>
@@ -46,7 +41,10 @@ export default function Home() {
               <div className={styles.shellPanelTab}>shell</div>
               <div className={styles.shellBody}>
                 <span className={styles.shellPrompt}>$ </span>
-                <span>ripe run hello.rp</span>
+                <span>ripec hello.rp</span>
+                <br />
+                <span className={styles.shellPrompt}>$ </span>
+                <span>./hello</span>
                 <br />
                 <span>hello, world</span>
               </div>
