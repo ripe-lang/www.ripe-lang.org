@@ -21,13 +21,14 @@
   --ifm-navbar-shadow: none;
 
   --ifm-font-family-base: system-ui, -apple-system, sans-serif;
-  --ifm-font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
-  --ifm-code-font-size: 87%;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+  --ifm-font-size-base: 17px;
+  --ifm-code-font-size: 92%;
 
   --ripe-border: 1px solid var(--ifm-color-emphasis-200);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --ifm-color-primary: #f0a020;
   --ifm-color-primary-dark: #e09018;
   --ifm-color-primary-darker: #d48515;
@@ -52,7 +53,6 @@
   font-size: 1.2rem;
 }
 
-
 .footer {
   border-top: var(--ripe-border);
   background: var(--ifm-background-color);
@@ -72,13 +72,13 @@
 }
 
 .footer__title {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .footer__link-item {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .footer__bottom {
@@ -87,11 +87,11 @@
 }
 
 .footer__copyright {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--ifm-color-emphasis-500);
 }
 
-div[class*="codeBlock"] {
+div[class*='codeBlock'] {
   box-shadow: none;
   border: var(--ripe-border);
 }
@@ -100,19 +100,25 @@ div[class*="codeBlock"] {
   border-right: var(--ripe-border) !important;
 }
 
+.theme-doc-markdown>header>h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
 .menu__link {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   border-radius: 0;
 }
 
 .menu__list-item-collapsible .menu__link {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-a[href*="//"]::after,
+a[href*='//']::after,
 .footer a::after {
   display: none !important;
 }
