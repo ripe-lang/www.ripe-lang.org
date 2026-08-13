@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import CodeBlock from "@theme/CodeBlock";
-import DownloadButton from "../components/DownloadButton";
-import styles from "./index.module.css";
+import React from 'react';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import CodeBlock from '@theme/CodeBlock';
+import DownloadButton from '../components/DownloadButton';
+import styles from './index.module.css';
 
 const HELLO_WORLD = `\
 extern "C" func puts(s: cstr) i32
@@ -21,9 +21,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>Ripe</h1>
-            <p className={styles.tagline}>
-              A systems programming language.
-            </p>
+            <p className={styles.tagline}>A systems programming language.</p>
             <div className={styles.ctas}>
               <DownloadButton />
               <Link className="button button--secondary" to="/docs/install">
