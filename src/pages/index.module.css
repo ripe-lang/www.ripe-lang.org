@@ -82,8 +82,8 @@
 }
 
 .codePanel pre,
-.codePanel div[class*="codeBlockContainer"],
-.codePanel div[class*="codeBlock"] {
+.codePanel div[class*='codeBlockContainer'],
+.codePanel div[class*='codeBlock'] {
   margin: 0 !important;
   border-radius: 0 !important;
   font-size: 0.85rem;

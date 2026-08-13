@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import type { FooterLinkItem } from "@docusaurus/theme-common";
-import styles from "./styles.module.css";
+import React from 'react';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import type { FooterLinkItem } from '@docusaurus/theme-common';
+import styles from './styles.module.css';
 
 function FooterLink({ to, href, label }: FooterLinkItem) {
   const linkProps = href
-    ? { href, target: "_blank", rel: "noopener noreferrer" }
+    ? { href, target: '_blank', rel: 'noopener noreferrer' }
     : { to };
   return (
     <Link className={styles.link} {...linkProps}>
