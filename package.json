@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "docusaurus build",
-    "watch": "concurrently \"nodemon --watch docs --watch blog --watch src --watch static --watch docusaurus.config.ts --watch sidebars.ts --ext md,mdx,ts,tsx,js,jsx,css,json --exec 'npm run build'\" \"docusaurus serve\"",
+    "watch": "fuser -k 3000/tcp; concurrently \"nodemon --watch docs --watch blog --watch src --watch static --watch docusaurus.config.ts --watch sidebars.ts --ext md,mdx,ts,tsx,js,jsx,css,json --exec 'npm run build'\" \"docusaurus serve\"",
     "typecheck": "tsc",
     "format": "prettier --write ."
   },
