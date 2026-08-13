@@ -1,39 +1,39 @@
-import React, { useEffect, useRef, useState } from "react";
-import Link from "@docusaurus/Link";
-import styles from "./styles.module.css";
+import React, { useEffect, useRef, useState } from 'react';
+import Link from '@docusaurus/Link';
+import styles from './styles.module.css';
 
 type Platform = {
   label: string;
-  os: "linux" | "macos" | "windows";
+  os: 'linux' | 'macos' | 'windows';
   href: string;
   available: boolean;
 };
 
 const PLATFORMS: Platform[] = [
   {
-    label: "Linux",
-    os: "linux",
-    href: "/docs/getting-started/installation",
+    label: 'Linux',
+    os: 'linux',
+    href: '/docs/install',
     available: true,
   },
   {
-    label: "macOS",
-    os: "macos",
-    href: "/docs/getting-started/installation",
+    label: 'macOS',
+    os: 'macos',
+    href: '/docs/install',
     available: false,
   },
   {
-    label: "Windows",
-    os: "windows",
-    href: "/docs/getting-started/installation",
+    label: 'Windows',
+    os: 'windows',
+    href: '/docs/install',
     available: false,
   },
 ];
 
 function detectPlatform(): Platform {
   const ua = navigator.userAgent.toLowerCase();
-  if (ua.includes("win")) return PLATFORMS[2];
-  if (ua.includes("mac")) return PLATFORMS[1];
+  if (ua.includes('win')) return PLATFORMS[2];
+  if (ua.includes('mac')) return PLATFORMS[1];
   return PLATFORMS[0]; // default linux
 }
 
@@ -53,8 +53,8 @@ export default function DownloadButton() {
         setOpen(false);
       }
     }
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
   }, []);
 
   return (
@@ -62,11 +62,7 @@ export default function DownloadButton() {
       <div className={styles.group}>
         <Link
           className={`button button--primary ${styles.main}`}
-          to={
-            platform.available
-              ? platform.href
-              : "/docs/getting-started/installation"
-          }
+          to={platform.available ? platform.href : '/docs/install'}
         >
           Download for {platform.label}
         </Link>
@@ -97,7 +93,7 @@ export default function DownloadButton() {
           {PLATFORMS.map((p) => (
             <button
               key={p.label}
-              className={`${styles.option} ${p.label === platform.label ? styles.active : ""}`}
+              className={`${styles.option} ${p.label === platform.label ? styles.active : ''}`}
               onClick={() => {
                 setPlatform(p);
                 setOpen(false);
