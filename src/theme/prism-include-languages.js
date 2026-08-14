@@ -56,20 +56,16 @@ export default function prismIncludeLanguages(Prism) {
         'class-name': /[\w.]+$/,
       },
     },
-    keyword:
-      /\b(?:var|func|struct|enum|type|newtype|comptime|module|import|if|else|while|for|in|break|continue|return|loop|match|extern|pub|as|sizeof)\b/,
+    keyword: /\b(?:var|func|struct|enum|type|newtype|comptime|module|import|if|else|while|for|in|break|continue|return|loop|match|extern|pub|as|sizeof)\b/,
     builtin: {
-      pattern:
-        /\b(?:i8|i16|i32|i64|u8|u16|u32|u64|isize|usize|f32|f64|bool|cstr|char|str|int|float|never|opaque)\b/,
+      pattern: /\b(?:i8|i16|i32|i64|u8|u16|u32|u64|isize|usize|f32|f64|bool|cstr|char|never|opaque|str|int|float)\b/,
       alias: 'class-name',
     },
     boolean: /\b(?:true|false)\b/,
     constant: /\b(?:null|undefined)\b/,
     function: /\b[A-Za-z_]\w*(?=\s*\()/,
-    number:
-      /\b(?:0[xX][\da-fA-F][\da-fA-F_]*|0[bB][01][01_]*|0[oO][0-7][0-7_]*|\d[\d_]*(?:\.\d[\d_]*)?(?:[eE][+-]?\d[\d_]*)?)(?:i8|i16|i32|i64|isize|u8|u16|u32|u64|usize|f32|f64)?\b/,
-    operator:
-      /\.\.=|\.\.\.|\.\.|<<=?|>>=?|&&|\|\||[+\-*/%&|^]=?|[=!<>]=|[=!~<>]/,
+    number: /\b(?:0[xX][\da-fA-F][\da-fA-F_]*|0[bB][01][01_]*|0[oO][0-7][0-7_]*|\d[\d_]*(?:\.\d[\d_]*)?(?:[eE][+-]?\d[\d_]*)?)(?:i8|i16|i32|i64|isize|u8|u16|u32|u64|usize|f32|f64)?\b/,
+    operator: /\.\.=|\.\.\.|\.\.|<<=?|>>=?|&&|\|\||[+\-*/%&|^]=?|[=!<>]=|[=!~<>]/,
     punctuation: /[{}[\]();,.:]/,
   };
 }
