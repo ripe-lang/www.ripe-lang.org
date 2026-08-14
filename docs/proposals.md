@@ -14,7 +14,7 @@ Nothing on this page compiles today.
 
 ### Operator overloading
 
-{/*no-check*/}
+<!-- no-check -->
 
 ```ripe
 struct Vec2 { x: f32, y: f32 }
@@ -26,7 +26,7 @@ func +(a: Vec2, b: Vec2) Vec2 {
 
 ### Index operator
 
-{/*no-check*/}
+<!-- no-check -->
 
 ```ripe
 func [](v: Vec2, i: i32) f32 {
@@ -37,7 +37,7 @@ func [](v: Vec2, i: i32) f32 {
 
 ### Call operator
 
-{/*no-check*/}
+<!-- no-check -->
 
 ```ripe
 struct Adder { base: i32 }
@@ -54,7 +54,7 @@ add5(3) // 8
 
 ### Dynamic arrays
 
-{/*no-check*/}
+<!-- no-check -->
 
 ```ripe
 var xs: [..]i32       // heap backed, grows on demand
