@@ -72,7 +72,7 @@ var total = 1 +
   3
 ```
 
-A semicolon ends a statement wherever it appears. This lets you write several statements on one line.
+A semicolon ends a statement wherever it appears. This lets you write several statements on one line. However semicolons are **NOT** required.
 
 ```ripe
 var a: i32 = 1; var b: i32 = 2;
