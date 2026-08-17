@@ -48,7 +48,7 @@ The names of the builtin types are ordinary identifiers rather than reserved wor
 
 ### 1.4. Keywords
 
-The following 27 identifiers are reserved.
+The following 26 identifiers are reserved.
 
 |             |          |            |            |
 | ----------- | -------- | ---------- | ---------- |
@@ -56,9 +56,9 @@ The following 27 identifiers are reserved.
 | `else`      | `enum`   | `extern`   | `false`    |
 | `for`       | `func`   | `if`       | `import`   |
 | `in`        | `loop`   | `match`    | `module`   |
-| `newtype`   | `null`   | `pub`      | `return`   |
-| `sizeof`    | `struct` | `true`     | `type`     |
-| `undefined` | `var`    | `while`    |            |
+| `null`      | `pub`    | `return`   | `sizeof`   |
+| `struct`    | `true`   | `type`     | `undefined`|
+| `var`       | `while`  |            |            |
 
 ### 1.5. Statement termination
 
@@ -336,15 +336,12 @@ func apply(fn: func (i32) i32, v: i32) i32 { return fn(v) }
 func apply_c(fn: extern "C" func (i32) i32, v: i32) i32 { return fn(v) }
 ```
 
-### 2.11. Type aliases and named types
+### 2.11. Type aliases
 
 A `type` declaration introduces a second name for an existing type. The two names denote the same type and are interchangeable.
 
-A `newtype` declaration introduces a distinct type with the representation of the type it names. It isn't interchangeable with that type.
-
 ```ripe
 type byte = u8
-newtype Celsius = f32
 ```
 
 ### 2.12. Unit
@@ -429,7 +426,7 @@ var worse = 1 / 0  // error: division by zero in constant
 
 ### 3.4. Local declarations
 
-Structs, type aliases, newtypes, enums, and functions may be declared inside a block. These declarations are visible only within that block.
+Structs, type aliases, enums, and functions may be declared inside a block. These declarations are visible only within that block.
 
 ```ripe
 func distance() i32 {
@@ -791,7 +788,6 @@ pub struct point { x: i32, y: i32 }
 pub comptime WIDTH: i32 = 6
 pub var TOTAL: i32 = 0
 pub type Count = i32
-pub newtype Celsius = i32
 ```
 
 Visibility and mutability are independent. A `pub var` is a single storage location that every importing module reads and writes.
