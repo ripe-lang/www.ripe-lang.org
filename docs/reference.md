@@ -57,7 +57,7 @@ The following 26 identifiers are reserved.
 | `for`       | `func`   | `if`       | `import`   |
 | `in`        | `loop`   | `match`    | `module`   |
 | `null`      | `pub`    | `return`   | `sizeof`   |
-| `struct`    | `true`   | `type`     | `undefined`|
+| `struct`    | `true`   | `type`     | `undefined` |
 | `var`       | `while`  |            |            |
 
 ### 1.5. Statement termination
