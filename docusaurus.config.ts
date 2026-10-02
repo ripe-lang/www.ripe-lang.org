@@ -70,11 +70,6 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          to: '/docs/reference',
-          label: 'Reference',
-          position: 'right',
-        },
-        {
           to: '/docs/faq',
           label: 'FAQ',
           position: 'right',
@@ -103,7 +98,6 @@ const config: Config = {
           items: [
             { label: 'Introduction', to: '/docs/intro' },
             { label: 'Install', to: '/docs/install' },
-            { label: 'Reference', to: '/docs/reference' },
             { label: 'FAQ', to: '/docs/faq' },
           ],
         },
