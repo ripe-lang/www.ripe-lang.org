@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "build": "docusaurus build",
-    "watch": "fuser -k 3000/tcp; concurrently \"nodemon --watch docs --watch blog --watch src --watch static --watch docusaurus.config.ts --watch sidebars.ts --ext md,mdx,ts,tsx,js,jsx,css,json --exec 'npm run build'\" \"docusaurus serve\"",
+    "watch": "fuser -k 3000/tcp; concurrently \"nodemon --watch docs --watch blog --watch src --watch static --watch docusaurus.config.ts --watch sidebars.ts --ext md,mdx,ts,tsx,js,jsx,css,json --exec 'npm run build'\" \"docusaurus serve --host 0.0.0.0\"",
     "typecheck": "tsc",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/faster": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
@@ -18,9 +19,9 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/tsconfig": "3.9.2",
-    "@docusaurus/types": "3.9.2",
+    "@docusaurus/module-type-aliases": "3.10.2",
+    "@docusaurus/tsconfig": "3.10.2",
+    "@docusaurus/types": "3.10.2",
     "concurrently": "^10.0.4",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1",
@@ -28,7 +29,9 @@
   },
   "overrides": {
     "serialize-javascript": "^7.0.5",
-    "uuid": "^11.1.1"
+    "uuid": "^11.1.1",
+    "tinypool": "^2.2.0",
+    "postcss-selector-parser": "^7.1.6"
   },
   "browserslist": {
     "production": [
