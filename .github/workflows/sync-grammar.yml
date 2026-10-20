@@ -1,0 +1,29 @@
+name: Sync grammar
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    name: Open a PR with the latest grammar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Download the grammar
+        run: curl -fsSL https://raw.githubusercontent.com/ripe-lang/vscode-ripe/main/syntax/prism.js -o src/theme/prism-include-languages.js
+
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: src/theme/prism-include-languages.js
+          branch: sync-grammar
+          delete-branch: true
+          commit-message: Sync the grammar
+          title: Sync the grammar
+          body: ""
