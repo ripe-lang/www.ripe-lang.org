@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Ripe',
-  tagline: 'A systems programming language',
+  tagline: 'A systems language you learn from a few rules and then guess the rest',
   favicon: 'img/logo.png',
 
   future: {

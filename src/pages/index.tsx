@@ -7,11 +7,16 @@ import DownloadButton from '../components/DownloadButton';
 import styles from './index.module.css';
 
 const HELLO_WORLD = `\
-extern "C" func puts(s: cstr) i32
+puts : (cstr) -> i32 : extern "C";
 
-func main() {
-  puts("hello, world")
-}`;
+greet : (i32) -> cstr = fn match {
+  0 => "hello, world",
+  _ => "hola, mundo",
+};
+
+main : () -> () : fn() => {
+  _ : i32 = puts(greet(0))
+};`;
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -21,7 +26,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>Ripe</h1>
-            <p className={styles.tagline}>A systems programming language.</p>
+            <p className={styles.tagline}>A systems language you learn from a few rules and then guess the rest.</p>
             <div className={styles.ctas}>
               <DownloadButton />
               <Link className="button button--secondary" to="/docs/install">
