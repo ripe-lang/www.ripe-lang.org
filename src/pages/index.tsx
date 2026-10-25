@@ -26,7 +26,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>Ripe</h1>
-            <p className={styles.tagline}>A systems language you learn from a few rules and then guess the rest.</p>
+            <p className={styles.tagline}>A systems language with a few rules—and the rest follows.</p>
             <div className={styles.ctas}>
               <DownloadButton />
               <Link className="button button--secondary" to="/docs/install">
